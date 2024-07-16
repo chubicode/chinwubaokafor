@@ -1,0 +1,761 @@
+/*The box-sizing property in CSS is used to control how the total width and height of an element are calculated. This property can help developers manage layout more predictably by including or excluding padding and borders in the element's dimensions.
+
+Why Use box-sizing: border-box?
+
+1. Predictability: It makes the element's size more predictable and easier to manage since the specified width and height include the padding and border.
+2. Layouts: Simplifies the creation of complex layouts, especially responsive designs.
+3.Consistency: Helps avoid the "box model" issues where elements with padding and border exceed their intended size.
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+
+  margin: 0;
+  min-height: 100vh;
+  margin: auto;
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  font-style: normal;
+ 
+ 
+  
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inconsolata", monospace;
+  font-weight: 700; /* Bold weight for headings */
+}
+
+
+
+
+.portfolio-container{
+
+  background-color:#F6F5F2;
+  font-family: "Inconsolata", monospace;
+  min-width: 500px;
+  margin: auto;
+
+}
+
+
+/* creating the navbar component */
+.nav-bar{
+position: sticky;
+top: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1000;
+display: flex;
+justify-content: end;
+padding: 0;
+}
+
+nav.sticky{
+  background-color: #FEB941;
+}
+  
+.nav-bar ul{
+
+list-style-type:none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+
+
+.nav-bar > ul > li{
+
+display: inline;
+padding: 30px;
+font-weight: 700;
+font-size:larger;
+ 
+
+  
+}
+
+.nav-bar > ul> li :hover{
+  color:#6DC5D1;
+  transition:all 0.3s ease;
+
+ 
+  
+}
+
+.nav-bar a{
+  
+
+text-decoration: none;
+color:#d90909;
+
+}
+
+.hamburger-menu{
+
+display: none;
+font-size: 30px;
+cursor: pointer;
+
+}
+
+#menu-toggle{
+
+display:none;
+
+}
+
+
+.landing-page{
+/* border: 1px solid green; */
+
+display: flex;
+justify-content:space-evenly;
+align-items: center;
+margin: auto;
+width: 75%;
+height: 100vh;
+
+
+}
+.image{
+  /* border: 2px solid green; */
+  
+width: 25%;
+margin: 70px;
+
+}
+.landing-page img{
+
+width: 100%;
+border-radius: 20%;
+
+}
+
+.brief-history{
+/* border: 2px solid purple; */
+text-align: center;
+padding: 20px;
+width: 50%;
+
+}
+.brief-history > h1{
+/* border: 1px solid black; */
+font-weight:600 ;
+
+color:#102C57;
+margin-bottom: 10px;
+
+
+  }
+.brief-history p{
+  /* border: 1px solid black; */
+  font-size: 20px;
+  font-weight: 600;
+  
+  
+  line-height: 1.5;
+  
+}
+
+button{
+
+background-color: #DBB5B5;
+border: none;
+padding:10px;
+border-radius: 5px;
+font-family: "Lato", sans-serif;
+font-weight: 800;
+gap:9px;
+margin-top: 20px;
+width: 150px;
+height: 40px;
+cursor: pointer;
+
+
+  }
+
+  button:hover{
+    background-color: #FEB941;
+    color:black;
+    cursor: pointer;
+  }
+
+.services{
+box-sizing: border-box;
+padding: 80px  ;
+background-color:#F0EBE3;
+
+
+  }
+ .service-header {
+
+
+text-align: center;
+margin-bottom: 30px;
+
+  
+}
+
+.service-header p{
+
+font-weight: 500;
+color: #006989;
+
+margin-bottom: 30px;
+font-size: larger;
+
+}
+
+.service-header h1{
+
+
+font-weight: 600;
+color: #006989;
+margin-bottom: 20px;
+
+
+}
+
+.pro{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 50px;
+  margin-top: 0;
+
+}
+
+/* Common styles for all projects */
+.service {
+  width: 350px;
+  max-width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  word-wrap: break-word;
+  
+  
+  
+  
+}
+
+.service img{
+  margin-top: 30px;
+}
+
+.service p {
+  text-align: left;
+  margin-left: 8px;
+  margin-top: 8px;
+  font-size: small;
+  font-weight: 300;
+  color: white;
+  line-height: 1.5;
+
+}
+
+
+.service h1 {
+  text-align: left;
+  margin-left: 8px;
+  margin-top: 8px;
+  font-size: x-large;
+  color: white;
+ 
+}
+
+/* Specific background colors */
+.service1 {
+  background-color: teal;
+ 
+}
+
+.service2 {
+  background-color: black;
+ 
+}
+
+.service3 {
+  background-color: purple;
+  
+  
+}
+
+.projects{
+box-sizing: border-box;
+padding: 50px;
+background-color: #FFFFFF;
+
+
+
+}
+.projects svg{
+  width: 100
+}
+
+.projects .works{
+text-align: center;
+}
+
+.projects .works h1{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.projects .works p{
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.project{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-left:auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 50%;
+ 
+}
+
+.project img{
+  width: 20%;
+  
+  
+}
+
+.project-text h2{
+  color: #102C57;
+  margin-bottom: 10px;
+}
+
+.project1-text{
+  width: 60%;
+  padding: 20px;
+  text-align: left;
+  font-size: 1rem; /* Default font size */
+  line-height: 1.6;
+ 
+  
+}
+.project2-text{
+  width: 60%;
+  padding: 20px;
+  text-align: left;
+  font-size: 1rem; /* Default font size */
+  line-height: 1.6;
+  
+}
+.project3-text{
+  width: 60%;
+  padding: 20px;
+  text-align: left;
+  font-size: 1rem; /* Default font size */
+  line-height: 1.6;
+  
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.form-text{
+  
+  margin-top: 40px;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.form-text p{
+  margin-top: 15px;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #FEB941;
+  background-color:#FEB941 ;
+  border-radius: 10px;
+}
+
+#form-btn{
+  background-color: #FEB941;
+ display: flex;
+ justify-content: center;
+ margin:  auto;
+ padding: 10px 50px;
+ border: none;
+}
+
+
+/* Combined media query for all specified ranges */
+@media (max-width: 1200px) and (min-width: 993px),
+       (max-width: 992px) and (min-width: 769px),
+       (max-width: 768px) and (min-width: 577px) {
+  .project1-text,.project2-text,.project3-text{
+    width: 100%;
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+}
+
+/* Additional specific tweaks within ranges */
+@media (max-width: 1200px) and (min-width: 993px) {
+  .project1-text,.project2-text,.project3-text {
+    width: 70%;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .project1-text,.project2-text,.project3-text{
+    width: 80%;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 577px) {
+  .project1-text {
+    width: 90%;
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .projects .project {
+    flex-direction: column;
+  }
+
+  .project img {
+    width: 100%;
+  }
+
+  .project1-text {
+    width: 100%;
+  }
+  .project2-text {
+    width: 100%;
+  }
+  .project3-text {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Common styles for SVG images */
+.service-image {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  width: 50px;
+  margin-right: 80%;
+}
+
+
+  
+.span-front{
+    color: #028391;
+  }
+
+
+
+
+
+  /* position: fixed;
+
+This positions the .sticky-icons container relative to the viewport. This means the container will stay in the same place on the screen even when the user scrolls.
+In this case, it is fixed to the left side of the viewport.
+top: 50%;
+
+This positions the top of the .sticky-icons container 50% down from the top of the viewport.
+This alone would place the top of the container in the middle of the screen, but not necessarily center the whole container.
+left: 0;
+
+This positions the left side of the .sticky-icons container at the left edge of the viewport.
+transform: translateY(-50%);
+
+This moves the .sticky-icons container up by 50% of its own height, effectively centering it vertically within the viewport.
+The translateY(-50%) adjustment compensates for the fact that top: 50% aligns the top edge of the element with the middle of the viewport.
+display: flex;
+
+This enables flexbox layout for the .sticky-icons container, which makes it easier to align and distribute the child elements (the icons).
+flex-direction: column;
+
+This makes the flex container stack its children (the icons) in a vertical column.
+gap: 10px;
+
+This sets a 10-pixel gap between each of the child elements (the icons) within the flex container. */
+
+.sticky-icons {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction:column;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.8s;
+  margin-right: 20px;
+  
+  gap: 10px;
+
+}
+
+.icon{
+  width: 100%;
+border-radius: 20%;
+}
+
+
+
+.sticky-icons :hover {
+  transform: scale(1.1);
+}
+
+/* Add this to your style.css */
+@@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 1s, opacity 1s;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideIn 1s forwards;
+}
+
+
+
+/* scale in n smaller screens */
+
+@media (max-width:763px){
+
+ 
+
+  .portfolio-container{
+    height: 100%;
+   
+    
+  }
+  .landing-page{
+
+    display: block;
+    justify-content:center;
+    align-items: center;
+    padding-bottom: 100px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 280px;
+        
+  }
+  .image{
+  
+    width: 50%;
+    margin: auto;
+    
+    
+  }
+  img{
+  
+  width: 100%
+    }
+
+  .brief-history{
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto; 
+      }
+
+  .nav-bar{
+  justify-content:space-between;
+      }
+
+  .nav-bar ul{
+
+  display: none;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+ 
+  
+  }
+      
+  .nav-bar > ul > li{
+
+  display: block;
+  padding: 15px;
+  text-transform: uppercase;
+  transition: 0.3s;
+
+    }
+
+  .nav-bar > ul > li:hover{
+  
+    color: #6DC5D1;
+  }
+
+    /* The .hamburger-menu is hidden by default and shown only on mobile devices (using the media query).
+The #menu-toggle checkbox is hidden.
+When the #menu-toggle checkbox is checked, it will display the ul.nav-links using the adjacent sibling combinator +. */
+
+  .hamburger-menu{
+  display: block;
+  color: white;
+  margin-left: 10px;
+  }
+
+  #menu-toggle:checked + .hamburger-menu + .nav-links{
+
+  display: flex;
+  }
+
+    .pro{
+  display: block;
+  justify-content:center;
+  width: 100%;
+  height: 50%;
+  margin:auto;
+
+  }
+
+  .service1{
+  margin-left: auto;
+  margin-right: auto;
+  
+  }
+
+  .service2{
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  
+  }
+
+  .service3{
+  margin-left: auto;
+  margin-right:auto ;
+ 
+  }
+
+  .services{
+
+  width: 100%;
+  height: 50%;
+  background-color:#F0EBE3 ;
+  }
+
+  .service-header {
+
+  display: block;
+  border: 10px solid #F0EBE3;
+  text-align: center;
+  margin: auto;
+
+
+  }
+
+}
+
+@media (max-width:755px){
+
+  .landing-page{
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 270px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
